@@ -9603,6 +9603,14 @@ PrefabInstance:
       propertyPath: characters.Array.data[0].characterTextColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2482879748349040769, guid: a04b717be9a61254c86fbd5538589c18, type: 3}
+      propertyPath: characterID
+      value: 4137232a-f9d7-11ee-a96a-42010a7be00e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482879748349040769, guid: a04b717be9a61254c86fbd5538589c18, type: 3}
+      propertyPath: characterName
+      value: Romina
+      objectReference: {fileID: 0}
     - target: {fileID: 4056144950106497200, guid: a04b717be9a61254c86fbd5538589c18, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.927
