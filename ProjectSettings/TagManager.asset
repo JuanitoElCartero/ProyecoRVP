@@ -10,6 +10,7 @@ TagManager:
   - Dedo
   - LeftHand
   - RightHand
+  - Interactive
   layers:
   - Default
   - TransparentFX
