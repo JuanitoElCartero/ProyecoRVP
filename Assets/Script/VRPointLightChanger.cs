@@ -2,13 +2,15 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 
-public class Lightswitchsala : MonoBehaviour
+public class VRPointLightColorChanger : MonoBehaviour
 {
     public XRRayInteractor rightHandRay;
     public XRRayInteractor leftHandRay; // Si quieres incluir la mano izquierda
 
-    public List<Light> pointLights; // Lista de luces que quieres desactivar/activar
+    public List<Light> pointLights; // Lista de luces que quieres cambiar de color
     private bool isHovering;
+    private int colorIndex = 0;
+    private Color[] colors = { Color.red, Color.blue, Color.white };
 
     void Start()
     {
@@ -48,17 +50,19 @@ public class Lightswitchsala : MonoBehaviour
     void Update()
     {
         // Detectar si el gatillo derecho o izquierdo está presionado
-        if (isHovering && (Input.GetButtonDown("Trigger") || Input.GetButtonDown("Trigger")))
+        if (isHovering && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
         {
-            TogglePointLights();
+            ChangeLightColors();
         }
     }
 
-    private void TogglePointLights()
+    private void ChangeLightColors()
     {
+        colorIndex = (colorIndex + 1) % colors.Length;
+
         foreach (var light in pointLights)
         {
-            light.gameObject.SetActive(!light.gameObject.activeSelf);
+            light.color = colors[colorIndex];
         }
     }
 }

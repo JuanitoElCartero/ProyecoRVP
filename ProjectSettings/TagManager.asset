@@ -11,6 +11,8 @@ TagManager:
   - LeftHand
   - RightHand
   - Interactive
+  - Anchor
+  - CambiarColor
   layers:
   - Default
   - TransparentFX

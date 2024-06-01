@@ -57,5 +57,3 @@ public class VrTextureChanger : MonoBehaviour
     }
 }
 
-
-
