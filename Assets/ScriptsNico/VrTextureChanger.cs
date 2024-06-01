@@ -26,7 +26,7 @@ public class VrTextureChanger : MonoBehaviour
             }
         }
 
-        // Si no se encuentra ningún objeto interactivo, ocultar la UI
+        // Si no se encuentra ningï¿½n objeto interactivo, ocultar la UI
         HideUI();
         selectedObject = null;
     }
@@ -34,17 +34,17 @@ public class VrTextureChanger : MonoBehaviour
     void ShowUI(Vector3 position)
     {
         // Desplazamiento hacia la derecha del rayo
-        Vector3 offset = vrCamera.transform.right * 0.5f; // Ajusta este valor según sea necesario
+        Vector3 offset = vrCamera.transform.right * 0.5f; // Ajusta este valor segï¿½n sea necesario
 
-        // Aplica el desplazamiento a la posición del Canvas
+        // Aplica el desplazamiento a la posiciï¿½n del Canvas
         Vector3 uiPosition = position + offset;
 
         objectUICanvas.transform.position = uiPosition;
 
-        // Hacer que el Canvas mire hacia la cámara
+        // Hacer que el Canvas mire hacia la cï¿½mara
         objectUICanvas.transform.LookAt(vrCamera.transform);
 
-        // Ajustar la rotación para que no esté al revés
+        // Ajustar la rotaciï¿½n para que no estï¿½ al revï¿½s
         objectUICanvas.transform.Rotate(0, 180, 0);
 
         objectUICanvas.gameObject.SetActive(true);
